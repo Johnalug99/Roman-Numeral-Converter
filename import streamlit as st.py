@@ -3,7 +3,7 @@ import streamlit as st
 def roman_converter():
     st.title('Roman Numeral Converter')
 
-    roman_num = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    roman_num = {'D': 1000, 'M': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
 
     question = st.text_input('Enter the Roman numeral you want to convert:')
     
@@ -19,7 +19,7 @@ def roman_converter():
             else:
                 number = sum(score)
 
-            st.success(f'The number is: {number}') 
+            st.success(f'The number is: {number}')
         except KeyError:
             st.error("Invalid Roman numeral. Please enter valid characters (D, M, C, L, X, V, I).")
 
